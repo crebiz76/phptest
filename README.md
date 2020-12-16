@@ -59,3 +59,22 @@
     - 대입연산자(=, +=, -=, *=, /=, %=, .=) or 할당연산자
     - 비교연산자(>, <, >=, <=, ==, !=)
     - 논리연산자(&&, ||)
+
+## 6. 제어문 - IF 조건문/WHILE 반복문
+- print vs. echo
+    - print: 반환값을 가진다. 
+    - echo: 반환값을 가지지 않는다. 
+
+- 조건문
+    - if ~ else
+    - if ~ elseif ~ else
+    - switch
+
+- 반복문
+    - while
+    - for
+    - do ~ while
+
+- php web page
+    - HTML과 php가 혼용된 형태
+    - HTML 문서에 php 파일이 삽입된 형태로 php 파일로 생성하면됨. 
