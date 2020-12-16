@@ -78,3 +78,17 @@
 - php web page
     - HTML과 php가 혼용된 형태
     - HTML 문서에 php 파일이 삽입된 형태로 php 파일로 생성하면됨. 
+
+## 7. 제어문 - FOR 반복문
+- 테이블의 구조
+    - <table>
+        - <th>: table header
+        - <tr>: table row
+        - <td>: table data
+
+- while 반복문 -> for 반복문
+
+- **GET 방식 vs POST 방식**
+
+- 게시판 목록 보기
+
