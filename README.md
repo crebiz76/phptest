@@ -35,3 +35,19 @@
 - EditPlus vs. NetBeans IDE
 
 ## 3. NetBeans 설치 및 사용법
+
+## 4. 상수와 변수
+- 상수(constant)
+    - PHP_VERSION
+    - PHP_OS
+    - __LINE__
+    - __FILE__
+    - __DIR__
+    - __FUNCTION__
+    - __CLASS__
+    - true/false/null
+
+- 변수(variable)
+    - 동적 변수 할당: php 코드가 실행되는 도중 값이 변함
+    - 데이터 형식이 지정되지 않아도 됨
+    - 반드시 $ 기호를 입력 후 사용
