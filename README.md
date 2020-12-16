@@ -33,3 +33,5 @@
         - date.timezone = Asia/Seoul
             
 - EditPlus vs. NetBeans IDE
+
+## 3. NetBeans 설치 및 사용법
