@@ -18,3 +18,18 @@
         - /c/xampp/htdocs
 
 - 프로그램 작성과 실행
+
+## 2. PHP 기초
+- apache 설정
+    - httpd.conf(/c/xampp/apache/conf)
+        - LISTEN 80
+        - DocumentRoot "C:/xampp/htdocs"
+        - DirectoryIndex
+    - services(/c/Windows/System32/drivers/etc)
+
+- php 설정
+    - php.ini(/c/xampp/php)
+        - default_charset="UTF-8"
+        - date.timezone = Asia/Seoul
+            
+- EditPlus vs. NetBeans IDE
