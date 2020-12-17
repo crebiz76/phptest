@@ -95,3 +95,5 @@
 ## 8. 제어문 - DO WHILE 반복문
 - dowhile.php
 
+## 9. 배열 - 1차원 배열, 2차원 배열
+- array 함수
