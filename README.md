@@ -97,3 +97,30 @@
 
 ## 9. 배열 - 1차원 배열, 2차원 배열
 - array 함수
+
+## 10. 내장함수와 사용자 정의 함수
+- 함수의 정의: function keyword
+    - 함수 호출 전에 함수의 정의가 되어야 한다. 
+
+- 내장함수: 시스템에 존재하는 함수
+    - 수학, 문자열, 파일, MySQL 데이터베이스 관련 내장 함수
+        - abs(), sin(), cos(), tan(), date(), ceil(), floor(), round(), sqrt(), rand()
+        - echo(), explode(), strlen(), str_replace(), substr(), nl2br(), sprintf()
+        - copy(), mkdir(), chdir(), fopen(), fread(), fwrite()
+        - mysql_connect(), mysql_create_db(), mysql_drop_db(), mysql_close()
+
+- 외장함수: 사용자가 정의한 함수
+
+- strlen(): Get string length
+    ```php
+    strlen(string $string):int
+    ```
+- substr(): Return part of a string
+    ```php
+    substr(string $string, int $start [,int $length]):int
+    ```
+- explode(): Split a string by a string
+    ```php
+    explode(string $delimiter, string $string [, int $limit = PHP_INT_MAX]):array
+    ```
+
