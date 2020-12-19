@@ -191,7 +191,7 @@
 - MySQL의 특징
     - SQL(Structured Query Language)에 기반을 둔 관계형 DBMS 중 하나
     - Oracle, Informix, DB2 등 고가
-    - MySQL(->Maria) 무료
+    - MySQL(->MariaDB) 무료
     - 리눅스, 유닉스, 윈도우 등 거의 모든 운영체제 사용가능
     - 처리 속도가 빠르고 대용량 데이터 처리 용이
     - 보안성 우수
@@ -218,5 +218,57 @@
     - create database phptest
     -> charater set utf8 collate utf8_general_ci;
 
+## 14. MySQL 각종 명령어1 - 사용자 추가, 테이블 생성 등
+- 데이블 구조 출력
+    - DESC {table};
+        ```sql
+        desc user;
+        ```
+- 데이블의 User, Password 데이터 출력
+    - SELECT {Field,..} FROM {table};
+        ```sql
+        select User, Password from user;
+        ```
 
-
+- 사용자 등록
+    - GRANT INSERT, SELECT, UPDATE, DELETE, CREATE, ALTER, DROP, ...
+    on {DB}.{Table} to 'id@host' IDENTIFIED BY 'password';
+    
+        ```sql
+        grant insert, select, update, delete, create, alter, drop
+        on phptest.* to 'crebiz'@'localhost' identified by '123456';
+        ```
+- 테이블 생성
+    - 데이터형
+        - 숫자(tinyint, smallint)
+        - 문자(char, varchar)
+        - 시간/날짜
+    - 예시
+        ```sql
+        create table member(
+        -> id varchar(20) not null primary key,
+        -> password varchar(20) not null,
+        -> email varchar(25),
+        -> tel varchar(25));
+        ```
+- 데이터 조작(추가)
+    INSERT INTO {table}({field}, ...) VALUES({record},...)
+    ```sql
+        insert into member(id, password, email, tel)
+        values('홍길동', 'hong', 'hong@example.com', '010-1234-5678');
+    ```
+- 데이터 검색
+    SELECT {field},... FROM {table};
+    ```sql
+        select * from member;
+        select password from member where id = '홍길동';
+    ```
+- 데이터 변경(업데이트)
+    UPDATE {table} SET {field/update} = {value/update} WHERE {field/index} = {value/index};
+    ```sql
+        update member set id = 'leesunsin' where password = 'lee';
+    ```
+- 데이터 삭제
+    DELETE FROM {table} WHERE {field} = {value};
+    ```sql
+        delete member where password = 'kang';
