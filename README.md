@@ -123,4 +123,48 @@
     ```php
     explode(string $delimiter, string $string [, int $limit = PHP_INT_MAX]):array
     ```
+## 11. 쿠키와 세션(1)
+- 쿠키: 서버에서 클라이언트에 텍스트 파일을 기록
+    - setcookie() 함수
+    - 예) 로그인 상태 유지
+
+- register_globals = Off(default)
+    - register_globals = On이면, 쿠키 사용
+
+- setcookie() 함수
+    - 형식
+        ```php
+        bool setcookie (string name [, string value [, int expire [, string path [, string domain [, bool secure]]]]])
+        ```
+    - 함수의 인자
+        - name: 쿠키의 이름으로 대소문자 구분
+        - value: 쿠키값으로 이 값을 사용자 컴퓨터에 저장
+        - expire: 쿠키의 유효 시간(초 단위)
+            - ex) time() + 60*60*24*30 -> 30일간 쿠키 값 유지
+        - path: 쿠키를 사용할 수 있는 경로
+        - domain: 쿠키를 이용할 수 있는 도메인을 의미
+        - secure: 기본은 FALSE 값이고, TRUE로 설정하면 사이트 접속 시에만 쿠키가 설정
+    - 기능: HTTP 헤더에 보낼 쿠키를 정의한다. 
+    - 반환값: TRUE(성공)/FALSE(실패)
+    - 설명
+        - setcookie() 함수는 <html> or <head> 태그 이전에 사용한다. 
+        - 만약 다른 태그를 먼저 사용하면 쿠키를 생성할 수 없다. 
+
+- time() 함수
+    - 형식
+        ```php
+        int time(void)
+        ```
+    - 기능: 현재 시간을 알림
+    - 반환값: 현재 시간(성공 시)
+    - 설명
+        - 유닉스에서 사용하는 기준(1970-01-01 00:00:00 GMT)으로 설정
+        - 현재 시각을 초 단위로 계산한 값을 정수형으로 변환
+
+- 세션: 대표적으로 로그인과 관련된 부분
+    - 예시) 로그인해야 볼 수 있는 페이지가 있는 사이트가 있다. 
+    - 서버 단에 데이터 위치, 세션정보 그리고 데이터 가공 부분이 있다. 
+    - 클라이언트도 세션 정보를 가지고 있다. 서로 대응되는 정보로 같지 않다. 
+    - 서버 중심적
+    
 
