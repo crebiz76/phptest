@@ -179,6 +179,44 @@
     - $_COOKIE
     - $_SESSION
 
+## 13. 데이터베이스 개념(MySQL 접속, DB 생성과 삭제)
+- DB와 DBMS
+
+- 관계형 데이터베이스(RDBMS)의 구조
+    - 2차원 테이블에 데이터 저장
+        - 테이블
+        - 필드
+        - 레코드
+
+- MySQL의 특징
+    - SQL(Structured Query Language)에 기반을 둔 관계형 DBMS 중 하나
+    - Oracle, Informix, DB2 등 고가
+    - MySQL(->Maria) 무료
+    - 리눅스, 유닉스, 윈도우 등 거의 모든 운영체제 사용가능
+    - 처리 속도가 빠르고 대용량 데이터 처리 용이
+    - 보안성 우수
+
+- MySQL 실행
+    - C:\xamp\mysql\bin
+        - mysql.exe
+        - mysqladmin.exe
+    - MySQL 접속
+        - mysql -u root -p
+        - password 없이 Enter
+
+- MySQL 접속
+    - mysql -u root -p
+    - mysql -u root -p test
+- 데이터베이스 확인
+    - show databases;
+- 종료
+    - quit
+
+- 새로운 데이터베이스 생성/삭제
+    - create database phptest;
+    - drop database phptest;
+    - create database phptest
+    -> charater set utf8 collate utf8_general_ci;
 
 
 
