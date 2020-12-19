@@ -166,5 +166,19 @@
     - 서버 단에 데이터 위치, 세션정보 그리고 데이터 가공 부분이 있다. 
     - 클라이언트도 세션 정보를 가지고 있다. 서로 대응되는 정보로 같지 않다. 
     - 서버 중심적
-    
+
+## 12.쿠키와 세션(2)
+- super global variables(superglobals)
+    - $GLOBALS
+    - $_SERVER
+    - $_REQUEST
+    - $_POST
+    - $_GET
+    - $_FILES
+    - $_ENV
+    - $_COOKIE
+    - $_SESSION
+
+
+
 
