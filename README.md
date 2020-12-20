@@ -272,3 +272,42 @@
     DELETE FROM {table} WHERE {field} = {value};
     ```sql
         delete member where password = 'kang';
+
+# 15. MySQL 명령어
+- 데이터베이스 접속 명령
+    - mysql -u계정 -p비밀번호 데이터베이스명
+- 데이터베이스 생성 명령
+    - create database 데이터베이스명
+
+- 사용자 등록
+    - create user '사용자명'@'호스트명' identified by '비밀번호'
+- 사용자 삭제
+    - drop user '사용자명'@'호스트명'
+- 사용자 권한 부여
+    - grant 권한 on 데이터베이스명.* to '사용자명'@'호스트명'
+- 사용자 접근 권한 해제
+    - revoke all on *.* from '사용자명'@'호스트명'
+
+- 데이터베이스 생성
+    - create database 데이터베이스명 [character set utf8]
+- 데이터베이스 삭제
+    - drop database 데이터베이스명
+- 데이터베이스 사용
+    - use 데이터베이스명
+
+- 테이블 생성
+    - create table 테이블명(
+        필드명 데이터타입 [Null/Not Null],
+        ...,
+        primary key(필드명)
+    )
+
+    - 데이터형
+        - 숫자(tinyint(1bytes), smallint(2B), mediumint(3B), int(4B), bigint(8B))
+        - 문자(char(크기가 정해진 문자열), varchar(크기가 정해져 있지 않는 문자열))
+        - 시간/날짜(date(날짜), datetime(8B, 1000-01-01 ~ 9999-12-31), timestamp(4B, 1970-01-01~))
+- 테이블 삭제
+    - drop table 테이블명
+- 테이블 수정
+    - alter table 테이블명 add 필드명 데이터타입
+    
