@@ -311,7 +311,7 @@
 - 테이블 수정
     - alter table 테이블명 add 필드명 데이터타입
 
-## ch16. 회원관리1 - 가입폼과 가입처리 페이지 작성
+## 16. 회원관리1 - 가입폼과 가입처리 페이지 작성
 - insertPro.php
     ```php
     <?php
@@ -338,4 +338,14 @@
         }
     ?>
     ```
+## 17. 회원관리2 - DB 연동, List와 Delete 페이지 작성
+- 회원가입 조회 페이지: list.php
+    - insertPro.php 소스 코드 활용
+    - MyDB.php 데이터베이스 연동
+    - SQL문 작성
+        - Select 문을 사용할 경우, beginTransaction()은 사용하지 않아도 됨
+        - beginTransaction()는 데이터가 변경될 경우에만 사용
+    - 수정 및 삭제
+        - delete.php
+
 
