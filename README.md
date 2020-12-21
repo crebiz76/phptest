@@ -348,4 +348,7 @@
     - 수정 및 삭제
         - delete.php
 
+## 18. 회원관리3 - Update 폼과 처리 페이지
+- 회원 목록 출력: list.php
+- 사용자 정보 수정: updateForm.php, updatePro.php
 
