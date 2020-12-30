@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#wrap{
+    width:1000px;
+    border:dashed 2px #0000ff;
+}
+
+#header{
+    width:100%;
+    border:dashed 1px #ff0000;
+    background-color: orange;
+}
+
+#top_login{
+    border:dashed 1px #0000ff;
+    text-align: right;
+}
+
+#menu{
+    width:20%;
+    height:100%;
+    float:left;
+    border:dashed 1px #ff0000;
+}
+
+#content{
+    float:left;
+    margin-top:2rem;
+    margin-left:2rem;
+}
+/* #logo{
+    width:1000px;
+}
+
+#moto{
+    width:100px;
+    height:100px;
+    display:none;
+} */

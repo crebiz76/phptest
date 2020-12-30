@@ -1,0 +1,82 @@
+/* *{
+    margin:0;
+    padding:0;
+}
+
+header {
+    background-color:beige;
+}
+
+nav {
+    background-color:burlywood;
+}
+
+article {
+    display:none;
+    background-color:yellowgreen;
+}
+
+.active {
+    display:block;
+} */
+
+body {
+    margin: 0;
+    font-size: 0;
+    max-width: 1080px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+}
+
+header {
+    padding: 1rem;
+    font-size: 1rem;
+    /* height: 4rem; */
+    text-align: center;
+    background-color:burlywood;
+}
+
+.info {
+    display: block;
+    /* text-align: right; */
+    float:right;
+}
+
+nav {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color:antiquewhite;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-items{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+li{
+    list-style: none;
+    float: left;
+}
+
+/* 불필요
+* {
+    padding: 0;
+    margin: 0;
+} */
+
+article {
+    font-size:1rem;
+    display:none;
+    background-color:yellowgreen;
+}
+
+.active {
+    display:block;
+}

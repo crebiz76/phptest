@@ -1,0 +1,63 @@
+body{
+    margin:0;
+    padding:0;
+
+    /* background-image:url();
+    background-repeat: repeat-x; */
+
+    font-family:"돋움";
+    font-size:12px;
+    font-weight:normal;
+    color:#333333;
+}
+
+img{
+    border:0;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover, a:visited, a:link, a.active{
+    font-family:"돋움";
+    font-size:12px;
+    font-weight:normal;
+    color:#333333;
+}
+
+ul, li{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.clear{
+    clear:both;
+}
+
+.linespace_10{
+    height:10px;
+}
+
+#wrap{
+    width:1000px;
+    margin-right:auto;
+    margin-left:auto;
+    min-height:600px;
+    /* border:solid 1px #00ff00; */
+}
+
+#header{
+    /* height:62px; */
+    /* border:solid 1px #cccccc; */
+    margin-top:16px;
+}
+
+#logo{
+    float:left;
+    margin-left:35px;
+    /* // 이하 확인 필요 */
+    max-width:100%;
+    max-height:100%;
+}
