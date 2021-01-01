@@ -3,7 +3,6 @@
     
     $id = $_REQUEST["id"];
     $pass = $_REQUEST["pass"];
-    // $level = $_REQUEST["level"];
     
     require_once("./MyDB.php");
     $pdo = db_connect();
@@ -23,7 +22,6 @@
     // 가입자가 없을 때 
     if($count < 1)
     {
-        // print "가입자(수정자)가 없습니다. <br>";
 ?>
         <script>
             alert("아이디가 틀립니다.");
@@ -43,18 +41,17 @@
     }
     else
     {
-?>
-        <script>
-            console.log(`id: <?=$_SESSION['id'] ?> `);
-            console.log(`name: <?=$_SESSION['name'] ?> `);
-            console.log(`nick: <?=$_SESSION['nick'] ?> `);
-            console.log(`level: <?=$_SESSION['level'] ?> `);
-        </script>
-<?php
+        $id = $row['id'];
+        $pass = $row['pass'];
+        $name = $row['name'];
+        $nick = $row['nick'];
+        $level = $row['level'];
+
         if(isset($_REQUEST["chkbox"]))
         {
             $a = setcookie("id", $id, time()+60*60*24);
             $b = setcookie("pass", $pass, time()+60*60*24);
+            $c = setcookie("level", $level, time()+60*60*24);
         }
         $_SESSION["id"] = $id;
         $_SESSION["name"] = $name;
@@ -62,6 +59,7 @@
         $_SESSION["level"] = $level;
 ?>
         <script>
+            alert("로그인 상태 진입");
             console.log(`id: <?=$_SESSION['id'] ?> `);
             console.log(`name: <?=$_SESSION['name'] ?> `);
             console.log(`nick: <?=$_SESSION['nick'] ?> `);

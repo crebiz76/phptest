@@ -9,42 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/common.css" type="text/css">
-    <!-- <script>
-        function login_check(){
-            if(!document.login_form.id.value)
-            {
-                alert("아이디를 입력하세요");
-                document.login_form.id.focus();
-                return;
-            }
-            
-            if(!document.login_form.pass.value)
-            {
-                alert("비밀번호를 입력하세요");
-                document.login_form.pass.focus();
-                return;
-            }
-            document.login_form.submit();
-        }
-
-        function activateArticle(clicked_id){
-            
-            document.querySelector('.login_form').classList.remove('active');
-            document.querySelector('.join_form').classList.remove('active');
-            if(clicked_id == 1)
-            {
-                document.querySelector('.login_form').classList.add('active');
-            }
-            else if(clicked_id == 2)
-            {
-                document.querySelector('.join_form').classList.add('active');
-            }
-            else
-            {
-                // No action
-            }
-        }
-    </script> -->
 </head>
 <body>
 <!-- header -->
@@ -58,9 +22,6 @@
         if(!isset($_SESSION['id']))
         {
     ?>
-            <!-- <a href="./login_form.php">로그인</a> | <a href="./insertForm.php">회원가입</a>       -->
-            <!-- <button type="button" onclick="document.querySelector('.login_form').classList.add('active')">로그인</button>
-            <button type="button" onclick="document.querySelector('.join_form').classList.add('active')">회원가입</button> -->
             <button type="button" id="1" onclick="activateArticle(this.id)">로그인</button>
             <button type="button" id="2" onclick="activateArticle(this.id)">회원가입</button>
     <?php
@@ -123,20 +84,20 @@
                 </tr>
                 <tr>
                     <td>* 비밀번호</td>
-                    <td colspan=3><a href="#"><input type="password" name="pass" placeholder="패스워드 입력" required></a></td>
+                    <td><a href="#"><input type="password" name="pass" placeholder="패스워드 입력" required></a></td>
                 </tr>
                 <tr>
                     <td>* 비밀번호 확인</td>
-                    <td colspan=3><a href="#"><input type="password" name="pass_confirm" placeholder="패스워드 입력 확인" required></a></td>
+                    <td><a href="#"><input type="password" name="pass_confirm" placeholder="패스워드 입력 확인" required></a></td>
                 </tr>
                 <tr>
                     <td>* 이름</td>
-                    <td colspan=3><a href="#"><input type="text" name="name" placeholder="이름" required></a></td>
+                    <td><a href="#"><input type="text" name="name" placeholder="이름" required></a></td>
                 </tr>
                 <tr>
                     <td>* 닉네임</td>
                     <td><a href="#"><input type="text" name="nick" placeholder="닉네임" required></a></td>
-                    <td colspan=2><a href="#"><input type="button" value="닉네임 중복확인"  onclick="check_nick()"></a></button></td>
+                    <td><a href="#"><input type="button" value="닉네임 중복확인"  onclick="check_nick()"></a></button></td>
                 </tr>
                 <tr>
                     <td>* 휴대폰</td>
@@ -147,7 +108,7 @@
                 <tr>
                     <td>  이메일</td>
                     <td><a href="#"><input type="text" name="email1" id="email1" >@</a></td>
-                    <td colspan=2><a href="#"><input type="text" name="email2"></a></td>
+                    <td><a href="#"><input type="text" name="email2"></a></td>
                 </tr>
                 <tr>
                     <td>

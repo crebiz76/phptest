@@ -80,3 +80,16 @@ article {
 .active {
     display:block;
 }
+
+table {
+    /* width: 80%; */
+    /* border: 1px solid #444444; */
+    border-top: 2px solid #444444;
+    border-collapse: collapse;
+
+}
+
+/* th, td{
+    border: 1px solid #444444;
+    border-bottom: 1px solid #444444;
+} */
