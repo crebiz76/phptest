@@ -91,3 +91,16 @@ function reset_form()
     document.member_form.id.focus();
     return;
 }
+
+function reset_update_form()
+{
+    alert("reset_update_form");
+    document.update_form.pass.value = "";
+    document.update_form.name.value = "";
+    document.update_form.nick.value = "";
+    document.update_form.hp2.value = "";
+    document.update_form.hp3.value = "";
+    document.update_form.email1.value = "";
+    document.update_form.email2.value = "";
+    return;
+}

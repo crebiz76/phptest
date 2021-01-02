@@ -46,7 +46,7 @@
             $email1 = $email[0];
             $email2 = $email[1]; 
 ?>
-        <form method="post" action="updatePro.php">
+        <form method="post" name="update_form" action="updatePro.php">
             <div id="reg-title"> ## 회원정보수정 ## </div>
             <table>
                 <tr>
@@ -81,7 +81,7 @@
                     <td colspan="2" align="center">
                         <!-- <input type="submit" value="수정하기"> -->
                         <input type="submit" value="수정하기" onclick="check_input()">
-                        <input type="reset" value="초기화하기" onclick="reset_form()">
+                        <input type="reset" value="초기화하기" onclick="reset_update_form()">
                     </td>
                 </tr>
             </table>
@@ -91,5 +91,6 @@
     <?php }
     }
     ?>
+<script src="js/common.js"></script>
 </body>
 </html>
