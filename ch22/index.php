@@ -31,7 +31,9 @@
         {
     ?>
             <?=$_SESSION['id'] ?> (Level: <?=$_SESSION['level'] ?>) | 
-            <a href="./logout.php">로그아웃</a> | <a href="./updateForm.php?id=<?=$_SESSON['id']?>">정보수정</a>
+            <!-- <a href="./logout.php">로그아웃</a> | <a href="./updateForm.php?id=<?=$_SESSON['id']?>">정보수정</a> -->
+            <button type="button" id="3" onclick="activateArticle(this.id)"><a href="logout.php" style="text-decoration:none">로그아웃</a></button>
+            <button type="button" id="4" onclick="activateArticle(this.id)"><a href="updateForm.php?id=<?=$_SESSION['id']?>" style="text-decoration:none">정보수정</a></button>
     <?php
         }
     ?>
@@ -73,7 +75,7 @@
         ?>
     </article>
     <article class="join_form">
-    <form action="./insertPro.php" name="member_form" method="post">
+        <form action="./insertPro.php" name="member_form" method="post">
             <div id="reg-title"> ## 회원가입 ## </div>
             <table>
                 <tr>
@@ -118,6 +120,10 @@
                 </tr>
             </table>
         </form>
+    </article>
+    <article class="logout_form">
+    </article>
+    <article class="update_form">
     </article>
 <!-- footer -->
     

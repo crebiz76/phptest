@@ -19,6 +19,9 @@ function activateArticle(clicked_id){
     
     document.querySelector('.login_form').classList.remove('active');
     document.querySelector('.join_form').classList.remove('active');
+    document.querySelector('.logout_form').classList.remove('active');
+    document.querySelector('.update_form').classList.remove('active');
+
     if(clicked_id == 1)
     {
         document.querySelector('.login_form').classList.add('active');
@@ -26,6 +29,14 @@ function activateArticle(clicked_id){
     else if(clicked_id == 2)
     {
         document.querySelector('.join_form').classList.add('active');
+    }
+    else if(clicked_id == 3)
+    {
+        document.querySelector('.logout_form').classList.add('active');
+    }
+    else if(clicked_id == 4)
+    {
+        document.querySelector('.update_form').classList.add('active');
     }
     else
     {
