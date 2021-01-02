@@ -19,8 +19,29 @@
     }
     
     $row=$stmh->fetch(PDO::FETCH_ASSOC);
+    // 관리자 접속 시
+    if(($id == 'admin') && ($pass=='123456'))
+    {
+        $name = 'master';
+        $nick = 'admin';
+        $level = '1';
+
+        if(isset($_REQUEST["chkbox"]))
+        {
+            $a = setcookie("id", $id, time()+60*60*24);
+            $b = setcookie("pass", $pass, time()+60*60*24);
+            $c = setcookie("level", $level, time()+60*60*24);
+        }
+        $_SESSION["id"] = $id;
+        $_SESSION["name"] = $name;
+        $_SESSION["nick"] = $nick;
+        $_SESSION["level"] = $level;
+
+        header("Location:http://localhost/source/ch23/index.php");
+        exit;
+    }
     // 가입자가 없을 때 
-    if($count < 1)
+    else if($count < 1)
     {
 ?>
         <script>

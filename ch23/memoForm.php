@@ -71,7 +71,7 @@
                 <li id="writer_title4">
                 <?php
                 if(isset($_SESSION['id'])){
-                    if($_SESSION['id'] == $memo_id){
+                    if(($_SESSION['id'] == 'admin') || ($_SESSION['id'] == $memo_id)){
                         print "<a href='deleteMemo.php?num=$memo_num'>[삭제]</a>";
                     }
                 }
@@ -82,21 +82,39 @@
         <div id="memo_content"><?=$memo_content ?>
         <hr width="600px" align="left">
         </div>
-        <!-- 댓글이 없는 경우 댓글 부분 삭제 -->
+        <!-- 댓글이 없는 경우 댓글 부분 표시 안 되도록 함 -->
         <div id="ripple">
-            <div id="ripple1">댓글
-            <hr width="300px" align="left">
+        <?php
+                try{
+                    $sql = "select * from memo_ripple where parent='$memo_num'";
+                    $stmh1 = $pdo->query($sql);
+            
+                    $count1 = $stmh1->rowCount();
+                    // print "검색결과는 $count1 건입니다. <br>";     
+                } catch (PDOException $Exception){
+                    print "오류 :".$Exception->getMessage();
+                }
+                
+                // 검색결과가 가입자가 있을 때 화면에 표시
+                if($count1 > 0)
+                {
+        ?>
+                    <div id="ripple1">댓글
+                    <hr width="300px" align="left">
+        <?php
+                }
+        ?>
             </div>
             <div id="ripple2">
                 <?php
                 try{
                     $sql = "select * from memo_ripple where parent='$memo_num'";
-                    $stmh1 = $pdo -> query($sql);
+                    $stmh2 = $pdo -> query($sql);
                 } catch(PDOException $Exception){
                     print "오류: ".$Exception -> getMessage();
                 }
 
-                while($row_ripple = $stmh1 -> fetch(PDO::FETCH_ASSOC)){
+                while($row_ripple = $stmh2 -> fetch(PDO::FETCH_ASSOC)){
                     $ripple_num = $row_ripple['num'];
                     $ripple_id = $row_ripple['id'];
                     $ripple_nick = $row_ripple['nick'];
@@ -110,7 +128,7 @@
                         <li id="mdi_del">
                             <?php
                             if(isset($_SESSION['id'])){
-                                if($_SESSION['id'] == $memo_id){
+                                if(($_SESSION['id'] == 'admin') || ($_SESSION['id'] == $memo_id)){
                                     print "<a href='deleteMemo.php?num=$memo_num'>[삭제]</a>";
                                 }
                             }
@@ -139,7 +157,7 @@
                 </div>
             </div>
         </div>
-        <?php
+        <?php       
                 }
             }
         ?>

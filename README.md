@@ -427,4 +427,8 @@
     - 댓글 저장 insertMemoRipple.php
     - 댓글 삭제 deleteMemoRipple.php
 
+- 과제: 댓글이 없는 경우 댓글 부분 표시 안 되도록 함
+- 과제: 관리자 모드로 접속 시 메모/댓글 삭제 가능
+
+
 
