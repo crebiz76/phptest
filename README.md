@@ -430,5 +430,52 @@
 - 과제: 댓글이 없는 경우 댓글 부분 표시 안 되도록 함
 - 과제: 관리자 모드로 접속 시 메모/댓글 삭제 가능
 
+## 24. 실전 웹사이듵 만들기 - 가입인사 게시판 만들기
+- 목표
+    - 게시판 구현하는 방법 숙지
+    - 게시판 검색 기능 구현
+    - HTML 글쓰기 처리
+    - 게시판 글 저장 및 수정을 한 페이지에서 처리
+    - 특정 사용자에게만 권한 부여
+- 목차
+    - 가입인사 게시판의 개요
+    - DB 테이블 설계 및 생성
+    - 글 목록 확인
+    - 글 작성/저장
+    - 글 내용 보기/수정
+    - 글 삭제
+- 요구사항
+    - 내용 검색(list.php 내 포함)
+    - 글 목록에서 제목 클릭 시 내용 보기(view.php)
+    - 조회수 처리
+    - HTML 쓰기 기능(write_form.php)
+    - 작성자와 관리자만 글 수정 및 삭제 가능
+    - 글 저장과 수정 글 저장을 한 파일에서 처리(insert.php)
+- 구성
+    - 데이터베이스: greet.sql
+    - 페이지: 
+        - list.php
+        - write_from.php
+        - view.php
+        - modify_form.php
+    - 기능:
+        - insert.php
+        - delete.php
 
+![greeting](./image/greeting.png)
 
+### phpmyadmin
+Location: localhost/phpmyadmin
+
+### htmlspecialchars
+- 형식
+    ```php
+        string htmlspecialchars(string $string)
+    ```
+- 기능
+    - $string의 내용 중에서 HTML 특수 문자를 HTML 코드로 변경
+        - &(ampersand) -> &amp;
+        - "(double quote) -> &quot;
+        - '(single quote) -> &apos;
+        - <(less than) -> &lt;
+        - >(greater than) -> &gt;
